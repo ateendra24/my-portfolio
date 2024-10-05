@@ -21,13 +21,29 @@
             </ul>
         </div>
         <div class="nav-right-mobile align-items">
-            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.2821 1.7063H20.2565" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M1.2821 8.41248H20.2565" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M1.2821 15.1188H20.2565" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle">
+                <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.2821 1.7063H20.2565" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M1.2821 8.41248H20.2565" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M1.2821 15.1188H20.2565" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </label>
+            <div class="mobileMenu">
+                <ul class="flex col">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+
+
     <section id="hero" class="flex justify-content align-items">
 
         <div class="hero-left flex justify-content align-items">
@@ -52,31 +68,62 @@
         <h2 class="sec-title">Projects</h2>
 
         <div class="project-content flex justify-content">
-            <a class="project-card" href="https://github.com/ateendra24/Password_Generator" target="_blank">
-                <div class="project-image"><img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2FPasswordGenerator.png&w=1920&q=75" alt=""></div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2FPasswordGenerator.png&w=1920&q=75"
+                        alt="">
+                </div>
                 <h3 class="project-title">Password Generator</h3>
-                <p class="project-desc">A simple and secure password generator built with Vite, React, and Tailwind CSS.</p>
-            </a>
-            <a class="project-card" href="https://github.com/ateendra24/React-Currency-Convertor" target="_blank">
-                <div class="project-image"><img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2FCurrencyConvertor.png&w=1920&q=75" alt=""></div>
+                <p class="project-desc">A simple and secure password generator built with Vite, React, and Tailwind CSS.
+                </p>
+                <a href="https://github.com/ateendra24/Password_Generator" target="_blank" class="view-project">View
+                    Project</a>
+            </div>
+
+
+            <div class="project-card" >
+                <div class="project-image"><img
+                        src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2FCurrencyConvertor.png&w=1920&q=75"
+                        alt=""></div>
                 <h3 class="project-title">Currency Generator</h3>
                 <p class="project-desc">A simple and efficient currency converter built with React.</p>
-            </a>
-            <a class="project-card" href="https://github.com/ateendra24/facebook_login_page" target="_blank">
-                <div class="project-image"><img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Ffacebook-login-page.png&w=1920&q=75" alt=""></div>
+                <a href="https://github.com/ateendra24/React-Currency-Convertor" target="_blank" class="view-project">View
+                    Project</a>
+            </div>
+
+
+            <div class="project-card" >
+                <div class="project-image"><img
+                        src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Ffacebook-login-page.png&w=1920&q=75"
+                        alt=""></div>
                 <h3 class="project-title">Facebook Login Page</h3>
                 <p class="project-desc">Clone of facebook login page, made with tailwind.</p>
-            </a>
-            <a class="project-card" href="https://github.com/ateendra24/Apple-Clone" target="_blank">
-                <div class="project-image"><img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Fapple-landing-page.png&w=1920&q=75" alt=""></div>
+                <a href="https://github.com/ateendra24/facebook_login_page" target="_blank" class="view-project">View
+                    Project</a>
+            </div>
+
+
+            <div class="project-card" >
+                <div class="project-image"><img
+                        src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Fapple-landing-page.png&w=1920&q=75"
+                        alt=""></div>
                 <h3 class="project-title">Apple Landing Page</h3>
                 <p class="project-desc">Clone of Apple website landing page, and fully responsive.</p>
-            </a>
-            <a class="project-card" href="https://github.com/ateendra24/Ghaziabad_University" target="_blank">
-                <div class="project-image"><img src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Funiversity.png&w=1920&q=75" alt=""></div>
+                <a href="https://github.com/ateendra24/Apple-Clone" target="_blank" class="view-project">View
+                    Project</a>
+            </div>
+
+
+            <div class="project-card" >
+                <div class="project-image"><img
+                        src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Funiversity.png&w=1920&q=75" alt="">
+                </div>
                 <h3 class="project-title">University Landing Page</h3>
                 <p class="project-desc">A simple landing page for a University website.</p>
-            </a>
+                <a href="https://github.com/ateendra24/Ghaziabad_University" target="_blank" class="view-project">View
+                    Project</a>
+            </div>
 
         </div>
 

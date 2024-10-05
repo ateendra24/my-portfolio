@@ -1,156 +1,243 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
+    font-family: inherit;
 }
-body{
+
+body {
     font-family: "Raleway", sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-:root{
+
+:root {
     --gray: rgba(128, 128, 128, 0.701);
     --light-gray: rgba(128, 128, 128, 0.245);
 }
 
 /* Common Classes */
-.flex{
+.flex {
     display: flex;
 }
-.justify-content{
+
+.justify-content {
     justify-content: center;
 }
-.align-items{
+
+.align-items {
     align-items: center;
 }
-section{
+
+section {
     min-height: calc(100vh - 51px);
     height: 100%;
     width: 100%;
 }
-.sec-title{
+
+.sec-title {
     font-size: 36px;
     padding-top: 12px;
     text-align: center;
 }
-.col{
+
+.col {
     flex-direction: column;
 }
 
 
 /* Navbar */
-.navbar{
+.navbar {
     padding: 10px 25px;
     width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid var(--gray);
 }
-.nav-left span{
+
+.nav-left span {
     font-size: 20px;
     font-weight: 900;
 }
-.nav-right ul{
+
+.nav-right ul {
     list-style: none;
     display: inline-flex;
-    gap: 18px;
+    gap: 24px;
 }
-.nav-right-mobile{
+
+.nav-right ul li a {
+    font-weight: 500;
+}
+
+.nav-right-mobile {
     display: none;
 }
 
+/* Mobile Navbar */
+#menu-toggle {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+#menu-toggle:checked~.mobileMenu {
+    display: flex;
+}
+#menu-toggle:checked~body {
+    background-color: red;
+}
+
+.mobileMenu ul li {
+    padding: 20px;
+    list-style: none;
+}
+
+.mobileMenu ul li a {
+    font-size: 24px;
+    color: black;
+}
+
 /* Hero Section */
-#hero{
+#hero {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.hero-intro{
+
+.hero-intro {
     font-size: 20px;
 }
-.hero-title{
+
+.hero-title {
     font-size: 42px;
     font-weight: 800;
 }
-.hero-desc{
+
+.hero-desc {
     font-size: 16px;
     color: var(--gray);
 }
-.hero-btn{
+
+.hero-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: inherit;
 }
-.btn-project{
+
+.btn-project {
     color: white;
     background-color: #252525;
 }
-.btn-contact{
+
+.btn-contact {
     border: 1px solid var(--gray);
     background-color: white;
 }
-.hero-left{
+
+.hero-left {
     width: 40%;
 }
-.hero-right{
+
+.hero-right {
     width: 60%;
     flex-direction: column;
     gap: 14px;
 }
+.hero-left, .hero-right {
+    opacity: 0;
+    animation: upwards 1s forwards ease-out 0.6s;
+}
+@keyframes upwards {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Projects */
-#projects{
+#projects {
     background-color: var(--light-gray);
     gap: 32px;
 }
-.project-content{
+
+.project-content {
     flex-wrap: wrap;
     gap: 32px;
     margin-bottom: 28px;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem ;
+    padding: 0 1rem;
 }
-.project-card{
+
+.project-card {
     background-color: white;
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-.project-card img{
+
+.project-card img {
     width: 100%;
     border-radius: 5px;
 }
-.project-card img:hover{
+
+.project-card img:hover {
     transform: scale(1.1);
     transition: all 0.3s;
 }
-.project-image{
+
+.project-image {
     height: 200px;
     overflow: hidden;
 }
-.project-title{
+
+.project-title {
     font-size: 24px;
     padding: 12px 0;
 }
-.project-desc{
+
+.project-desc {
     font-size: 16px;
     color: var(--gray);
 }
-.project-links{
+
+.project-links {
     display: flex;
     gap: 12px;
     padding: 12px 0;
 }
-.project-links a{
+
+.project-links a {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
@@ -158,44 +245,64 @@ section{
     background-color: #252525;
     color: white;
 }
-.project-links a:hover{
+
+.project-links a:hover {
     background-color: #333;
 }
-
+.view-project{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    background-color: #252525;
+    color: white;
+    margin-bottom: 6px;
+    width: max-content;
+}
 
 
 /* Contact */
-#contact{
+#contact {
     flex-wrap: wrap;
     justify-content: center;
 }
-.contact-left,.contact-right{
+
+.contact-left,
+.contact-right {
     width: 50%;
     max-width: 500px;
 }
-.contact-left{
+
+.contact-left {
     gap: 12px;
 }
-.contact-desc{
+
+.contact-desc {
     max-width: 450px;
     text-align: center;
 }
-.contact-form{
+
+.contact-form {
     gap: 12px;
     width: 100%;
     padding: 0 2rem;
 }
-.contact-form input,textarea{
+
+.contact-form input,
+textarea {
     width: 100%;
     padding: 8px 10px;
     font-family: inherit;
     border-radius: 5px;
     border: 1px solid lightgray;
 }
-.contact-form textarea{
+
+.contact-form textarea {
     height: 100px;
 }
-.btn-submit{
+
+.btn-submit {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -204,7 +311,8 @@ section{
     background-color: #252525;
     color: white;
 }
-.social-links{
+
+.social-links {
     gap: 12px;
     padding: 10px 0;
 }
@@ -212,31 +320,41 @@ section{
 
 /* Responsive */
 @media (max-width: 640px) {
-    .nav-right{
+    .nav-right {
         display: none;
     }
-    .nav-right-mobile{
+
+    .nav-right-mobile {
         display: flex;
     }
-    #hero,#contact{
+
+    #hero,
+    #contact {
         min-height: auto;
     }
-    .hero-left,.hero-right{
+
+    .hero-left,
+    .hero-right {
         width: 100%;
     }
-    .hero-left{
+
+    .hero-left {
         padding: 3rem 0;
     }
-    .hero-right{
+
+    .hero-right {
         align-items: center;
         padding: 3rem 1rem;
         text-align: center;
     }
-    .contact-left,.contact-right{
+
+    .contact-left,
+    .contact-right {
         padding: 3rem 1rem;
         width: 100%;
     }
-    .contact-form{
+
+    .contact-form {
         padding: 0;
     }
 }
