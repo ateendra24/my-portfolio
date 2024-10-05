@@ -46,7 +46,7 @@ section {
 
 .sec-title {
     font-size: 36px;
-    padding-top: 12px;
+    padding-top: 22px;
     text-align: center;
 }
 
@@ -133,6 +133,7 @@ section {
 
 .hero-desc {
     font-size: 16px;
+    margin-bottom: 8px;
     color: var(--gray);
 }
 
@@ -188,10 +189,8 @@ section {
 .project-content {
     flex-wrap: wrap;
     gap: 32px;
-    margin-bottom: 28px;
     max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 4rem auto;
     padding: 0 1rem;
 }
 
@@ -219,11 +218,6 @@ section {
 .project-image {
     height: 200px;
     overflow: hidden;
-}
-
-.project-title {
-    font-size: 24px;
-    padding: 12px 0;
 }
 
 .project-desc {
@@ -339,19 +333,22 @@ textarea {
     }
 
     .hero-left {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
 
     .hero-right {
         align-items: center;
-        padding: 3rem 1rem;
+        padding: 6rem 1rem;
         text-align: center;
     }
 
     .contact-left,
     .contact-right {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         width: 100%;
+    }
+    .contact-right{
+        margin-bottom: 5rem;
     }
 
     .contact-form {
