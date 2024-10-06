@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Ateendra - Portfolio Website</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
     <nav class="flex navbar">
         <div class="nav-left">
             <span>APS</span>
         </div>
         <div class="nav-right">
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a class="nav-item" href="#hero">Home</a></li>
+                <li><a class="nav-item" href="#about">About Me</a></li>
+                <li><a class="nav-item" href="#projects">Projects</a></li>
+                <li><a class="nav-item" href="#contact">Contact Me</a></li>
             </ul>
         </div>
         <div class="nav-right-mobile align-items">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle">
+
+            <a href="#mobileMenu" class="hamburger">
                 <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.2821 1.7063H20.2565" stroke="black" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -32,8 +34,19 @@
                     <path d="M1.2821 15.1188H20.2565" stroke="black" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg>
-            </label>
-            <div class="mobileMenu">
+            </a>
+            <div class="mobileMenu" id="mobileMenu">
+                <div class="close-menu flex">
+                    <a href="#" class="close-menu-btn">
+                        <svg width="22" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 2L2 42" stroke="black" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 2L42 42" stroke="black" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </a>
+                </div>
                 <ul class="flex col">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About Me</a></li>
@@ -45,17 +58,16 @@
     </nav>
 
 
-
     <section id="hero" class="flex justify-content align-items">
 
         <div class="hero-left flex justify-content align-items">
-            <img width="170px" src="face.png" alt="">
+            <img width="200px" src="img/face.png" alt="">
         </div>
 
         <div class="hero-right flex justify-content">
             <p class="hero-intro">Hi,I am</p>
             <h1 class="hero-title">Ateendra Pratap Solanki</h1>
-            <p class="hero-desc">Full-stack developer specializing in React, Node.js, and cloud technologies.</p>
+            <p class="hero-desc">Engineering Student | Tech Enthusiast | Web Developer | Future Innovator at AKGEC</p>
 
             <div>
                 <a class="hero-btn btn-project" href="#projects">Projects</a>
@@ -69,10 +81,11 @@
     <section id="about" class="flex justify-content align-items col">
         <h2 class="sec-title">About Me</h2>
 
-        <div class="about-content">Hello! I'm Ateendra, a passionate web developer currently pursuing B.Tech in Computer Science. With a strong
+        <div class="about-content">Hello! I'm Ateendra, a passionate web developer currently pursuing B.Tech in Computer
+            Science. With a strong
             foundation in front-end and back-end technologies, I love creating dynamic and responsive web applications
             that provide a seamless user experience.
-        
+
             <div class="skills flex justify-content">
                 <div class="skill">HTML</div>
                 <div class="skill">CSS</div>
@@ -143,7 +156,7 @@
                         src="https://ateendra.vercel.app/_next/image?url=%2Fimages%2Funiversity.png&w=1920&q=75" alt="">
                 </div>
                 <h3 class="project-title">University Landing Page</h3>
-                <p class="project-desc">A simple landing page for a University website.</p>
+                <p class="project-desc">A simple and resp landing page for a University website made using HTML, CSS and Javascript.</p>
                 <a href="https://github.com/ateendra24/Ghaziabad_University" target="_blank" class="view-project">View
                     Project</a>
             </div>
@@ -189,7 +202,7 @@
 
         </div>
         <div class="contact-right flex justify-content align-items">
-            <form class="flex col contact-form">
+            <form action="mailto:ateendrasolanki@gmail.com" method="post" class="flex col contact-form">
 
                 <input type="text" name="name" placeholder="Name" required>
 
